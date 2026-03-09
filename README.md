@@ -104,12 +104,4 @@ The project follows a modular "Clean Architecture" structure as required in **Pa
 
 ```
 
----
 
-### **Design Justification (Part 2.1)**
-
-* **Normalization**: By separating **Trains** and **Cameras** from **Videos**, we prevent data redundancy and ensure referential integrity.
-* **Performance**: We implemented B-Tree indexes on `train_number` and `stored_timestamp` to ensure sub-second query times for the dashboard summary.
-* **Scalability**: Moving AI detections and Alerts to separate tables allows for high-frequency data ingestion without bloating the primary video records.
-
----
